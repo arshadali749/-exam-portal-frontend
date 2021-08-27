@@ -1,0 +1,55 @@
+<div class="bootstap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class=" form-container col-lg-2 offset-lg-3 ">
+
+                <div class="text-center">
+                    <img class="profile-img" src="../../../assets/images/default.png" alt="image is missing ">
+                    <h1>Register here!!</h1>
+                </div>
+{{user|json}}
+                <form (ngSubmit)="registerUser()">
+                    <mat-form-field class="fw" appearance="outline">
+                        <mat-label>User Name</mat-label>
+                        <input [(ngModel)]="user.username" type="text" name="username" matInput placeholder="Placeholder">
+                    </mat-form-field>
+
+                    <mat-form-field class="fw" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input  [(ngModel)]="user.password"type="password" name="password" matInput placeholder="Placeholder">
+                    </mat-form-field>
+
+                    <mat-form-field class="fw" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input [(ngModel)]="user.firstName"type="text" name="firstname" matInput placeholder="Placeholder">
+                    </mat-form-field>
+
+
+                    <mat-form-field class="fw" appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input [(ngModel)]="user.lastName"type="text" name="lastname" matInput placeholder="Placeholder">
+                    </mat-form-field>
+
+
+                    <mat-form-field class="fw" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input [(ngModel)]="user.email"type="email" name="email" matInput placeholder="Placeholder">
+                    </mat-form-field>
+
+
+                    <mat-form-field class="fw" appearance="outline">
+                        <mat-label>Contact Number</mat-label>
+                        <input [(ngModel)]="user.phone"type="number" name="phone" matInput placeholder="Placeholder">
+                    </mat-form-field>
+
+                    <div class="text-center">
+                        <button id="btn-submit" mat-raised-button color="primary" type="submit">SIGN UP</button>
+                        <button id="btn-reset" mat-raised-button color="accent" type="reset">CLEAR</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

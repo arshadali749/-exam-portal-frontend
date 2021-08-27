@@ -1,0 +1,28 @@
+.container{
+    padding: 100px;
+}
+.profile-img
+{
+    width: 100px;
+    height: 100px;
+}
+.fw{
+    width: 100%;
+}
+#btn-submit
+{
+    margin-right: 20px;
+    width: 120px;
+    height: 60px;
+}
+#btn-reset
+{
+    margin-right: 20px;
+    width: 120px;
+    height: 60px;
+}
+.form-container {
+    background-color:gray;
+    padding: 50px;
+   
+}
