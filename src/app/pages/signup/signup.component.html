@@ -7,39 +7,39 @@
                     <img class="profile-img" src="../../../assets/images/default.png" alt="image is missing ">
                     <h1>Register here!!</h1>
                 </div>
-
-                <form>
+{{user|json}}
+                <form (ngSubmit)="registerUser()">
                     <mat-form-field class="fw" appearance="outline">
                         <mat-label>User Name</mat-label>
-                        <input  type="text" name="user.username" matInput placeholder="Placeholder">
+                        <input [(ngModel)]="user.username" type="text" name="username" matInput placeholder="Placeholder">
                     </mat-form-field>
 
                     <mat-form-field class="fw" appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input  type="password" name="user.password" matInput placeholder="Placeholder">
+                        <input  [(ngModel)]="user.password"type="password" name="password" matInput placeholder="Placeholder">
                     </mat-form-field>
 
                     <mat-form-field class="fw" appearance="outline">
                         <mat-label>First Name</mat-label>
-                        <input type="text" name="user.firstname" matInput placeholder="Placeholder">
+                        <input [(ngModel)]="user.firstname"type="text" name="firstname" matInput placeholder="Placeholder">
                     </mat-form-field>
 
 
                     <mat-form-field class="fw" appearance="outline">
                         <mat-label>Last Name</mat-label>
-                        <input type="text" name="user.lastname" matInput placeholder="Placeholder">
+                        <input [(ngModel)]="user.lastname"type="text" name="lastname" matInput placeholder="Placeholder">
                     </mat-form-field>
 
 
                     <mat-form-field class="fw" appearance="outline">
                         <mat-label>Email</mat-label>
-                        <input type="email" name="user.email" matInput placeholder="Placeholder">
+                        <input [(ngModel)]="user.email"type="email" name="email" matInput placeholder="Placeholder">
                     </mat-form-field>
 
 
                     <mat-form-field class="fw" appearance="outline">
                         <mat-label>Contact Number</mat-label>
-                        <input type="number" name="user.phone" matInput placeholder="Placeholder">
+                        <input [(ngModel)]="user.phone"type="number" name="phone" matInput placeholder="Placeholder">
                     </mat-form-field>
 
                     <div class="text-center">

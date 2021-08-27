@@ -11,7 +11,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  user = {
+  public user = {
     username: "",
     firstname: "",
     lastname: "",
@@ -19,7 +19,25 @@ export class SignupComponent implements OnInit {
     phone: "",
     password: ""
   }
-  signUp() {
-    console.log(this.user.firstname);
+  registerUser() {
+    if (this.user.username.trim() == '' || this.user.username == null) {
+      alert("User Name is required.")
+      return;
+    }
+    if (this.user.firstname.trim()== '' || this.user.firstname == null) {
+      alert("First Name is required.")
+      return;
+    }
+    if (this.user.lastname.trim() == '' || this.user.lastname == null) {
+      alert("Last Name  is required.")
+      return;
+    }
+    if (this.user.email.trim() == '' || this.user.email == null) {
+      alert("Email is required.")
+      return;
+    }
+
+   
+
   }
 }
