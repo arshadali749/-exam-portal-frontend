@@ -15,6 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
