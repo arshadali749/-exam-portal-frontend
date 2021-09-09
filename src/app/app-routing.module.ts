@@ -7,18 +7,23 @@ import { SignupComponent } from './pages/signup/signup.component';
 
 const routes: Routes = [
 
-  // {
-  //   path:"",
-  //   component:NavbarComponent,
-  //   pathMatch:"full"
-  // },
+  {
+    path:"",
+    component:NavbarComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"login",
+    component:LoginComponent,
+    pathMatch:"full"
+  },
   {
     path:"signup",
     component:SignupComponent,
     pathMatch:"full"
   },
   {
-    path:"",
+    path:"home",
     component:HomeComponent,
     pathMatch:"full"
   }
