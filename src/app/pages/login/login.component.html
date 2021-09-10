@@ -1,7 +1,8 @@
+<app-navbar></app-navbar>
 <div class="bootstap-wrapper">
     <div class="container">
         <div class="row">
-            <div class=" form-container col-md-6 offset-md-3 ">
+            <div class="col col-lg-4 offset-lg-4 ">
                 <mat-card>
                     <div class="text-center">
                         <img class="profile-img" src="../../../assets/images/default.png" alt="image is missing ">
@@ -19,8 +20,9 @@
                             <input type="password" name="password" matInput placeholder="Placeholder">
                         </mat-form-field>
                         <div class="text-center">
-                            <button class="mr20" mat-raised-button color="primary" type="submit">SIGN UP</button>
-                            <button class="ml20" mat-raised-button color="accent" type="reset">CLEAR</button>
+                            <button class="mr20" mat-raised-button color="primary" type="submit">Login</button>
+                            <label text-color="accent">Not Registered??</label>
+                            <a routerLink="/signup"class="ml20" mat-raised-button color="accent" type="reset">Register Now</a>
                         </div>
 
                     </form>
