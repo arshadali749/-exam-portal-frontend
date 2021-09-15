@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private snack: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -19,28 +20,31 @@ export class SignupComponent implements OnInit {
     email: "",
     phone: "",
     password: "",
-    profile:"default.png"
+    profile: "default.png"
   }
   registerUser() {
-    if (this.user.username.trim() == '' || this.user.username == null) {
+    if (this.user.username.trim() == '' || this.user.username.trim() == null) {
       alert("User Name is required.")
       return;
     }
-    if (this.user.firstName.trim() == '' || this.user.firstName == null) {
+    if (this.user.firstName.trim() == '' || this.user.firstName.trim() == null) {
       alert("First Name is required.")
       return;
     }
-    if (this.user.lastName.trim() == '' || this.user.lastName == null) {
+    if (this.user.lastName.trim() == '' || this.user.lastName.trim() == null) {
       alert("Last Name  is required.")
       return;
     }
-    if (this.user.email.trim() == '' || this.user.email == null) {
+    if (this.user.email.trim() == '' || this.user.email.trim() == null) {
       alert("Email is required.")
       return;
     }
     this.userService.registerUser(this.user).subscribe(
       (data) => {
-        alert("User registration successful.");
+        this.snack.open('Registration successful', '', {
+          duration: 3000,
+        });
+        window.location.href = "login"
       },
       (error) => {
         alert("Some thing went wrong !!!");

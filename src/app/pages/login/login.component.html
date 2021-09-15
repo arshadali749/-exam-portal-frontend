@@ -9,15 +9,19 @@
                         <h1 class="mt30">Login  here!!</h1>
                     </div>
 
-                    <form>
+                    <form (ngSubmit)="onFormSbmit()">
                         <mat-form-field class="fw" appearance="outline">
                             <mat-label>User Name</mat-label>
-                            <input type="text" name="username" matInput placeholder="Placeholder">
+                            <input 
+                            [(ngModel)]="loginRequest.username"
+                            type="text" name="username" matInput placeholder="Placeholder">
                         </mat-form-field>
 
                         <mat-form-field class="fw" appearance="outline">
                             <mat-label>Password</mat-label>
-                            <input type="password" name="password" matInput placeholder="Placeholder">
+                            <input 
+                            [(ngModel)]="loginRequest.password"
+                            type="password" name="password" matInput placeholder="Placeholder">
                         </mat-form-field>
                         <div class="text-center">
                             <button class="mr20" mat-raised-button color="primary" type="submit">Login</button>

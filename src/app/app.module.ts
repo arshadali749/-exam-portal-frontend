@@ -18,6 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { authInterceptorProvider } from './interceptors/auth-interceptor';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 
 
 @NgModule({
@@ -29,6 +33,8 @@ import {MatIconModule} from '@angular/material/icon';
     LoginComponent,
     HomeComponent,
     FooterComponent,
+    DashboardComponent,
+    UserDashboardComponent,
    
   
   ],
@@ -43,10 +49,11 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatSnackBarModule
     
   ],
-  providers: [],
+  providers: [authInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
